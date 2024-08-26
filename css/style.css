@@ -1,0 +1,545 @@
+﻿@charset "utf-8";
+
+body {
+	min-width: 1020px;
+}
+
+/* skip navigation */
+.skip_navi .skip_wrap a {
+	position: absolute;
+	left: -9999%;
+	top: 0;
+	z-index: 9999;
+	padding: 6px 0;
+	width: 100%;
+	text-align: center;
+	text-decoration: none;
+	font-size: 0.875em;
+	background-color: #333;
+	color: #fff;
+}
+.skip_navi .skip_wrap a:focus {
+	left: 0;
+}
+
+/* header */
+.header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	position: relative;
+	margin: 0 auto;
+	width: 1020px;
+	height: 100px;
+}
+.header .signature {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%,-50%);
+}
+.header .social {
+	display: flex;
+	gap: 20px;
+}
+.header .social ul {
+	display: flex;
+	gap: 6px;
+}
+.header .location ul {
+	display: flex;
+}
+.header .location li a {
+	display: block;
+	position: relative;
+	padding: 0 10px;
+	line-height: 26px;
+	text-transform: uppercase;
+	font-size: 0.75em;
+	color: #797d85;
+}
+.header .location li a::after {
+	content: "";
+	position: absolute;
+	right: 0;
+	top: 8px;
+	width: 1px;
+	height: 10px;
+	background-color: #ddd;
+}
+.header .location li:last-child a {
+	padding-right: 0;
+}
+.header .location li:last-child a::after {
+	display: none;
+}
+
+/* navigation */
+.nav {
+	position: relative;
+	height: 55px;
+	min-width: 1019px;
+}
+.nav > ul {
+	position: absolute;
+	left: 0;
+	top: 0;
+	z-index: 1000;
+	display: flex;
+	justify-content: center;
+	width: 100%;
+	height: 55px;
+	overflow: hidden;
+	text-align: center;
+	background-color: #fff;
+	transition: height 0.3s;
+}
+.nav > ul::after {
+	content: "";
+	position: absolute;
+	left: 0;
+	top: 56px;
+	width: 100%;
+	height: 1px;
+	background-color: #dadada;
+}
+.nav > ul.over {
+	height: 185px;
+}
+.nav > ul > li {
+	position: relative;
+}
+.nav > ul > li > a {
+	display: block;
+	padding: 0 60px;
+	line-height: 55px;
+	font-size: 0.875em;
+	color: #2f2f2f;
+}
+.nav > ul > li:hover > a,
+.nav > ul > li.over > a {
+	color: #b4252d;
+}
+.nav .sub {
+	position: absolute;
+	left: 0;
+	top: 55px;
+	padding-left: 60px;
+	padding-top: 14px;
+	text-align: left;
+}
+.nav .sub a {
+	display: block;
+	padding: 6px 0 7px;
+	line-height: 1;
+	font-size: 0.75em;
+	color: #aaa;
+}
+.nav .sub a:hover,
+.nav .sub a:focus {
+	text-decoration: underline;
+	color: #000;
+}
+
+/* keyvisual */
+.slider {
+	position: relative;
+	overflow: hidden;
+}
+.slider .slider_area ul {
+	display: flex;
+	flex-wrap: nowrap;
+	position: relative;
+	width: 400%;
+	height: 420px;
+}
+.slider .slider_area ul li {
+	width: 25%;
+	height: 100%;
+}
+.slider .slider_area ul li img {
+	display: block;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+.slider .direction_nav a {
+	position: absolute;
+	top: 50%;
+	z-index: 12;
+	transform: translateY(-50%);
+}
+.slider .direction_nav a.left {
+	left: 20px;
+}
+.slider .direction_nav a.right {
+	right: 20px;
+}
+
+/* section */
+#section {
+	margin: 0 auto;
+	padding: 70px 0 60px;
+	width: 1020px;
+}
+#section .banner1 {
+	display: flex;
+	gap: 30px;
+}
+#section .banner1 .banner1_1 a {
+	display: block;
+	overflow: hidden;
+}
+#section .banner1 .banner1_1 a img {
+	display: block;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	transition: transform 0.3s;
+}
+#section .banner1 .banner1_1 a:hover img,
+#section .banner1 .banner1_1 a:focus img {
+	transform: scale(1.1);
+}
+#section .banner1 .banner1_2 a {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 300px;
+	height: 388px;
+	text-align: center;
+	border: 1px solid #a0a0a0;
+	box-sizing: border-box;
+}
+#section .banner1 .banner1_2 a strong {
+	display: block;
+	font-size: 1.5em;
+}
+#section .banner1 .banner1_2 a span {
+	display: block;
+	margin-top: 5px;
+	font-size: 0.875em;
+	color: #302f2f;
+}
+#section .banner1 .banner1_2 a p {
+	margin-top: 30px;
+	font-size: 0.875em;
+	color: #a0a0a0;
+}
+#section .banner1 .banner1_2 a:hover p,
+#section .banner1 .banner1_2 a:focus p {
+	text-decoration: underline;
+}
+#section .banner1 .banner1_2 a span.button {
+	display: inline-block;
+	margin-top: 30px;
+	padding: 0 20px;
+	line-height: 35px;
+	text-decoration: underline;
+	background-color: #fff;
+	box-sizing: border-box;
+	transition: 0.3s;
+}
+#section .banner1 .banner1_2 a:hover span.button,
+#section .banner1 .banner1_2 a:focus span.button {
+	text-decoration: none;
+	background-color: #b5252e;
+	color: #fff;
+}
+#section .banner2 {
+	display: flex;
+	gap: 30px;
+	margin-top: 30px;
+}
+#section .banner2 .banner2_1 a {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 300px;
+	height: 388px;
+	text-align: center;
+	border: 1px solid #a0a0a0;
+	box-sizing: border-box;
+}
+#section .banner2 .banner2_1 a strong {
+	display: block;
+	font-size: 1.5em;
+}
+#section .banner2 .banner2_1 a span {
+	display: block;
+	margin-top: 5px;
+	font-size: 0.875em;
+	color: #302f2f;
+}
+#section .banner2 .banner2_1 a p {
+	margin-top: 30px;
+	font-size: 0.875em;
+	color: #a0a0a0;
+}
+#section .banner2 .banner2_1 a:hover p,
+#section .banner2 .banner2_1 a:focus p {
+	text-decoration: underline;
+}
+#section .banner2 .banner2_1 a span.button {
+	display: inline-block;
+	margin-top: 30px;
+	padding: 0 20px;
+	line-height: 35px;
+	text-decoration: underline;
+	background-color: #fff;
+	box-sizing: border-box;
+	transition: 0.3s;
+}
+#section .banner2 .banner2_1 a:hover span.button,
+#section .banner2 .banner2_1 a:focus span.button {
+	text-decoration: none;
+	background-color: #b5252e;
+	color: #fff;
+}
+#section .banner2 .banner2_2 a {
+	display: block;
+	overflow: hidden;
+}
+#section .banner2 .banner2_2 a img {
+	display: block;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	transition: transform 0.3s;
+}
+#section .banner2 .banner2_2 a:hover img,
+#section .banner2 .banner2_2 a:focus img {
+	transform: scale(1.1);
+}
+#section .banner3 {
+	display: flex;
+	gap: 30px;
+	margin-top: 30px;
+}
+#section .banner3 .banner3_left .banner3_left_1 a {
+	display: block;
+	position: relative;
+}
+#section .banner3 .banner3_left .banner3_left_1 a img {
+	display: block;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+#section .banner3 .banner3_left .banner3_left_1 a .inner {
+	position: absolute;
+	left: 30px;
+	bottom: 56px;
+}
+#section .banner3 .banner3_left .banner3_left_1 a p {
+	font-size: 0.875em;
+	color: #fff;
+}
+#section .banner3 .banner3_left .banner3_left_1 a strong {
+	display: block;
+	font-size: 1.625em;
+	color: #fff;
+}
+#section .banner3 .banner3_left .banner3_left_1 a .button {
+	display: inline-block;
+	vertical-align: middle;
+	margin-top: 20px;
+	width: 100px;
+	line-height: 35px;
+	text-align: center;
+	font-size: 13px;
+	color: #fff;
+	border: 1px solid #fff;
+	transition: 0.4s;
+}
+#section .banner3 .banner3_left .banner3_left_1 a:hover .button,
+#section .banner3 .banner3_left .banner3_left_1 a:focus .button {
+	text-decoration: none;
+	background-color: #fff;
+	color: #444;
+}
+#section .banner3 .banner3_left .banner3_left_2 {
+	margin-top: 30px;
+}
+#section .banner3 .banner3_left .banner3_left_2 a {
+	display: block;
+	position: relative;
+}
+#section .banner3 .banner3_left .banner3_left_2 a .inner {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	position: absolute;
+	left: 15px;
+	top: 15px;
+	width: calc(100% - 30px);
+	height: calc(100% - 30px);
+	text-align: center;
+}
+#section .banner3 .banner3_left .banner3_left_2 a:hover .inner,
+#section .banner3 .banner3_left .banner3_left_2 a:focus .inner {
+	background: url(../images/new1.jpg) no-repeat center center;
+}
+#section .banner3 .banner3_left .banner3_left_2 a strong {
+	font-size: 2.25em;
+	color: #444;
+	transition: color 0.3s;
+}
+#section .banner3 .banner3_left .banner3_left_2 a p {
+	font-size: 0.875em;
+	color: #444;
+	transition: color 0.3s;
+}
+#section .banner3 .banner3_left .banner3_left_2 a:hover strong,
+#section .banner3 .banner3_left .banner3_left_2 a:focus strong,
+#section .banner3 .banner3_left .banner3_left_2 a:hover p,
+#section .banner3 .banner3_left .banner3_left_2 a:focus p {
+	color: #fff;
+}
+#section .banner3 .banner3_left .banner3_left_2 a .button {
+	display: inline-block;
+	margin-top: 30px;
+	padding: 0 26px;
+	line-height: 36px;
+	text-decoration: none;
+	font-size: 0.8125em;
+	background-color: #444;
+	color: #fff;
+	transition: 0.3s;
+}
+#section .banner3 .banner3_left .banner3_left_2 a:hover .button,
+#section .banner3 .banner3_left .banner3_left_2 a:focus .button {
+	background-color: #b5252e;
+}
+#section .banner3 .banner3_right .banner3_right_1 a {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 495px;
+	height: 300px;
+	text-align: center;
+	border: 1px solid #a0a0a0;
+	box-sizing: border-box;
+}
+#section .banner3 .banner3_right .banner3_right_1 a:hover,
+#section .banner3 .banner3_right .banner3_right_1 a:focus {
+	background: url(../images/sale.jpg) no-repeat center center;
+}
+#section .banner3 .banner3_right .banner3_right_1 a strong {
+	display: block;
+	font-size: 2.25em;
+	color: #444;
+	transition: color 0.3s;
+}
+#section .banner3 .banner3_right .banner3_right_1 a p {
+	font-size: 0.875em;
+	color: #444;
+	transition: color 0.3s;
+}
+#section .banner3 .banner3_right .banner3_right_1 a:hover strong,
+#section .banner3 .banner3_right .banner3_right_1 a:focus strong,
+#section .banner3 .banner3_right .banner3_right_1 a:hover p,
+#section .banner3 .banner3_right .banner3_right_1 a:focus p {
+	color: #fff;
+}
+#section .banner3 .banner3_right .banner3_right_1 a .button {
+	display: inline-block;
+	margin-top: 30px;
+	padding: 0 26px;
+	line-height: 36px;
+	text-decoration: none;
+	font-size: 0.8125em;
+	background-color: #444;
+	color: #fff;
+	transition: 0.3s;
+}
+#section .banner3 .banner3_right .banner3_right_1 a:hover .button,
+#section .banner3 .banner3_right .banner3_right_1 a:focus .button {
+	background-color: #b5252e;
+}
+#section .banner3 .banner3_right .banner3_right_2 a {
+	display: block;
+	position: relative;
+	margin-top: 30px;
+}
+#section .banner3 .banner3_right .banner3_right_2 a img {
+	display: block;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+#section .banner3 .banner3_right .banner3_right_2 a .inner {
+	position: absolute;
+	left: 30px;
+	bottom: 56px;
+}
+#section .banner3 .banner3_right .banner3_right_2 a p {
+	font-size: 0.875em;
+	color: #fff;
+}
+#section .banner3 .banner3_right .banner3_right_2 a strong {
+	display: block;
+	font-size: 1.625em;
+	color: #fff;
+}
+#section .banner3 .banner3_right .banner3_right_2 a .button {
+	display: inline-block;
+	vertical-align: middle;
+	margin-top: 20px;
+	width: 100px;
+	line-height: 35px;
+	text-align: center;
+	font-size: 13px;
+	color: #fff;
+	border: 1px solid #fff;
+	transition: 0.4s;
+}
+#section .banner3 .banner3_right .banner3_right_2 a:hover .button,
+#section .banner3 .banner3_right .banner3_right_2 a:focus .button {
+	text-decoration: none;
+	background-color: #fff;
+	color: #444;
+}
+
+/* footer */
+#footer {
+	padding: 55px 0;
+	background-color: #333;
+}
+#footer .footer_cont {
+	margin: 0 auto;
+	width: 1020px;
+	text-align: center;
+}
+#footer .footer_cont span {
+	font-size: 0.75em;
+	color: #727272;
+}
+#footer .footer_cont > a {
+	margin-left: 15px;
+}
+#footer .footer_cont .sns ul {
+	display: flex;
+	justify-content: center;
+}
+#footer .footer_cont .sns ul li {
+	position: relative;
+	padding: 20px 15px;
+}
+#footer .footer_cont .sns li::after {
+	content: "";
+	position: absolute;
+	top: 20px;
+	right: -2px;
+	width: 1px;
+	height: 16px;
+	background-color: #727272;
+}
+#footer .footer_cont .sns li:last-child::after {
+	display: none;
+}
+#footer .footer_cont p {
+	font-size: 0.75em;
+	color: #727272;
+}
